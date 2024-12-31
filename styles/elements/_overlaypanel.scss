@@ -1,0 +1,12 @@
+.overlay-panel {
+    position: absolute;
+    background: var(--surface-overlay, #fff);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+}

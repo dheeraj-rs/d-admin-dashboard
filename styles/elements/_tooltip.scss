@@ -1,0 +1,32 @@
+.tooltip {
+    position: absolute;
+    background-color: var(--surface-card, #fff);
+    color: var(--text-color, #495057);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    pointer-events: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        border: 5px solid transparent;
+    }
+
+    &.tooltip-bottom {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+
+        &::before {
+            border-bottom-color: var(--surface-card, #fff);
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    // Add other positions (top, left, right) as needed
+}

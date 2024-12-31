@@ -1,0 +1,43 @@
+.custom-tristatecheckbox {
+    display: inline-block;
+    cursor: pointer;
+
+    .checkbox-box {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--surface-border, #ced4da);
+        border-radius: 4px;
+        position: relative;
+        transition: background-color 0.2s, border-color 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            border-color: var(--primary-color, #2196f3);
+        }
+    }
+
+    .checkbox-icon {
+        font-family: 'PrimeIcons';
+        font-size: 12px;
+        color: var(--primary-color-text, #fff);
+
+        &.pi-check:before {
+            content: '\e909';
+        }
+
+        &.pi-times:before {
+            content: '\e90b';
+        }
+    }
+
+    &.disabled {
+        cursor: default;
+        opacity: 0.6;
+
+        .checkbox-box:hover {
+            border-color: var(--surface-border, #ced4da);
+        }
+    }
+}

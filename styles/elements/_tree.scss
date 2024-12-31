@@ -1,0 +1,36 @@
+.tree-container {
+    padding: 1rem;
+
+    .tree-node {
+        margin: 0.25rem 0;
+
+        .tree-node-content {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--surface-ground, #f0f0f0);
+            }
+        }
+
+        .tree-toggle-icon {
+            margin-right: 0.5rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+
+            &.expanded {
+                transform: rotate(90deg);
+            }
+        }
+
+        .tree-checkbox {
+            margin-right: 0.5rem;
+        }
+
+        .tree-label {
+            margin-left: 0.5rem;
+        }
+    }
+}

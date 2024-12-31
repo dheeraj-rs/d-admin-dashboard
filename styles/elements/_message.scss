@@ -1,0 +1,47 @@
+.custom-message {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0.25rem 0;
+
+    .message-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &.success {
+        background-color: var(--success-color-light, #dff2bf);
+        color: var(--success-color-primary, #4f8a10);
+        .message-icon {
+            background-image: url('data:image/svg+xml,...'); // Add success icon SVG
+        }
+    }
+
+    &.info {
+        background-color: var(--info-color-light, #bde5f8);
+        color: var(--info-color-primary, #00529b);
+        .message-icon {
+            background-image: url('data:image/svg+xml,...'); // Add info icon SVG
+        }
+    }
+
+    &.warn {
+        background-color: var(--warn-color-light, #feefb3);
+        color: var(--warn-color-primary, #9f6000);
+        .message-icon {
+            background-image: url('data:image/svg+xml,...'); // Add warning icon SVG
+        }
+    }
+
+    &.error {
+        background-color: var(--error-color-light, #ffd2d2);
+        color: var(--error-color-primary, #d8000c);
+        .message-icon {
+            background-image: url('data:image/svg+xml,...'); // Add error icon SVG
+        }
+    }
+}

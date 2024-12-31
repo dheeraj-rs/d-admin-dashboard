@@ -1,0 +1,122 @@
+.webconfig-studio {
+    padding: 0.5rem;
+    min-height: 100%;
+    background-color: var(--surface-ground);
+
+    .header {
+        margin-bottom: 2rem;
+        text-align: center;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .card-wrapper {
+        .website-card {
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+
+                .card-content {
+                    .title {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        margin: 0 0 0.5rem 0;
+                        color: var(--text-color);
+                    }
+
+                    .count {
+                        font-size: 0.875rem;
+                        color: var(--text-color-secondary);
+                    }
+                }
+
+                .icon-wrapper {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 50%;
+                    width: 3rem;
+                    height: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 1.5rem;
+                        color: var(--text-color);
+                    }
+                }
+            }
+
+            .card-content {
+                .description {
+                    color: var(--text-color-secondary);
+                    font-size: 0.875rem;
+                    line-height: 1.5;
+                    margin: 0;
+                }
+            }
+
+            .card-footer {
+                margin-top: 1.5rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--surface-border);
+
+                .status {
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.875rem;
+                    color: var(--text-color-secondary);
+
+                    i {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+
+            // Color variations
+            &.primary {
+                background: var(--primary-color);
+            }
+
+            &.secondary {
+                background: var(--secondary-color);
+            }
+
+            &.success {
+                background: var(--success-color);
+            }
+
+            &.warning {
+                background: var(--warning-color);
+            }
+
+            &.help {
+                background: var(--help-color);
+            }
+
+            &.danger {
+                background: var(--danger-color);
+            }
+        }
+    }
+}

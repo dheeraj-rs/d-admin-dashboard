@@ -1,0 +1,69 @@
+// styles/edit.module.scss
+.dashboardEditContainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .pageTitle {
+        color: var(--surface-900);
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .overviewGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .overviewGroup {
+        background-color: var(--surface-50);
+        border-radius: 8px;
+        padding: 1.5rem;
+        border: 1px solid var(--surface-200);
+
+        h3 {
+            color: var(--surface-600);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .inputGroup {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .p-float-label {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    .downloadActivityItem {
+        background-color: var(--surface-50);
+        border-radius: 8px;
+        padding: 1.5rem;
+        border: 1px solid var(--surface-200);
+        height: 100%;
+
+        h3 {
+            color: var(--surface-600);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .inputGroup {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+}

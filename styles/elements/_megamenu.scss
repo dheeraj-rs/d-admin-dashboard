@@ -1,0 +1,102 @@
+.megamenu {
+    background: var(--surface-card);
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    padding: 0.5rem;
+
+    &--vertical {
+        width: 16rem;
+
+        .megamenu__list {
+            flex-direction: column;
+        }
+
+        .megamenu__panel {
+            left: 100%;
+            top: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        position: relative;
+
+        &:hover {
+            .megamenu__panel {
+                display: block;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        border-radius: 6px;
+
+        &:hover {
+            background-color: var(--surface-hover);
+        }
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &__panel {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--surface-overlay);
+        border: 1px solid var(--surface-border);
+        border-radius: 6px;
+        padding: 1rem;
+        min-width: 30rem;
+        box-shadow: 0 2px 4px var(--surface-shadow, rgba(0, 0, 0, 0.1));
+        z-index: 1000;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    &__subtitle {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+
+    &__submenu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__submenu-item {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: var(--surface-hover);
+        }
+    }
+
+    &__submenu-icon {
+        margin-right: 0.5rem;
+    }
+}

@@ -1,0 +1,94 @@
+.custom-datatable {
+    position: relative;
+
+    .datatable-wrapper {
+        overflow: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--surface-border, #e2e8f0);
+        }
+
+        th {
+            background: var(--surface-ground);
+            font-weight: 600;
+            text-align: left;
+
+            &.sortable {
+                cursor: pointer;
+                user-select: none;
+
+                &:hover {
+                    background: var(--surface-ground);
+                }
+            }
+
+            .sort-icon {
+                margin-left: 0.5rem;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+
+                &.asc {
+                    border-bottom: 4px solid var(--text-color, #6c757d);
+                }
+
+                &.desc {
+                    border-top: 4px solid var(--text-color, #6c757d);
+                }
+            }
+        }
+
+        tr:nth-child(even) {
+            background: var(--surface-ground);
+        }
+
+        tr:hover {
+            background: var(--surface-ground);
+        }
+
+        tr.selected {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &.loading {
+        .datatable-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--surface-background, #fff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-spinner {
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid var(--surface-border, #e2e8f0);
+            border-top: 2px solid var(--primary-color, #3b82f6);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

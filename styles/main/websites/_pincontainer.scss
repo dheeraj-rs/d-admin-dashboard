@@ -1,0 +1,246 @@
+.pin-container {
+    position: relative;
+    z-index: 50;
+    cursor: pointer;
+
+    &:hover {
+        .pin-container__perspective {
+            opacity: 1;
+        }
+
+        .pin-container__pin-content {
+            border-color: var(--blur-border-color, rgba(255, 255, 255, 0.2));
+        }
+
+        .gradient-line {
+            height: 12rem;
+        }
+
+        .pin-container__gradient-underline {
+            opacity: 0.4;
+        }
+    }
+
+    &__pin-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: 0.09375rem;
+        margin-top: 1rem;
+        transform: translate(-50%, -50%);
+    }
+
+    &__pin-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotateX(0deg);
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0.75rem;
+        box-shadow: 0 8px 16px var(--box-shadow-color, rgba(0, 0, 0, 0.4));
+        border: 1px solid var(--blur-border-color, rgba(255, 255, 255, 0.1));
+        transition: border-color 700ms, transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+    }
+
+    &__perspective {
+        pointer-events: none;
+        width: 100%;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        z-index: 60;
+        transition: opacity 500ms;
+
+        .perspective-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            flex: none;
+            inset: 0;
+
+            .link-wrapper {
+                position: absolute;
+                top: -2rem;
+                inset-inline: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .ripple-wrapper {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: 0.09375rem;
+                margin-top: 1rem;
+                transform: translate(-50%, -50%);
+            }
+
+            .gradient-line {
+                position: absolute;
+                right: 50%;
+                bottom: 50%;
+                width: 1px;
+                height: 6rem;
+                background: linear-gradient(to bottom, transparent, var(--gradient-color, #06b6d4));
+                transform: translateY(14px);
+                transition: height 700ms;
+                opacity: 0;
+                transform-origin: bottom;
+                animation: gradientAppear 1s ease forwards;
+
+                @keyframes gradientAppear {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(14px) scaleY(0);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(14px) scaleY(1);
+                    }
+                }
+
+                &--blur {
+                    filter: blur(2px);
+                    animation-delay: 0.2s;
+                }
+            }
+
+            .glow-dot {
+                position: absolute;
+                right: 50%;
+                bottom: 50%;
+                transform: translateY(14px);
+                border-radius: 50%;
+                z-index: 40;
+
+                &--large {
+                    transform: translate(1.5px, 14px);
+                    width: 4px;
+                    height: 4px;
+                    background-color: var(--glow-dot-color, #0891b2);
+                    filter: blur(3px);
+                }
+
+                &--small {
+                    transform: translate(0.5px, 14px);
+                    width: 2px;
+                    height: 2px;
+                    background-color: var(--glow-dot-color, #67e8f9);
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        z-index: 10;
+        background-color: var(--link-background-color, #030712);
+        padding: 0.125rem 1rem;
+        border-radius: 9999px;
+        border: 1px solid var(--blur-border-color, rgba(255, 255, 255, 0.1));
+
+        &-text {
+            position: relative;
+            z-index: 20;
+            color: var(--link-text-color, white);
+            font-size: 0.75rem;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0.125rem 0;
+        }
+    }
+
+    &__gradient-underline {
+        position: absolute;
+        bottom: 0;
+        left: 1.125rem;
+        height: 1px;
+        width: calc(100% - 2.25rem);
+        background: linear-gradient(
+            to right,
+            rgba(var(--gradient-color, 52, 211, 153), 0),
+            rgba(var(--gradient-color, 52, 211, 153), 0.9),
+            rgba(var(--gradient-color, 52, 211, 153), 0)
+        );
+        opacity: 1;
+        transition: opacity 500ms;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+.ripple-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 11.25rem;
+    width: 11.25rem;
+    border-radius: 50%;
+    background-color: rgba(var(--ripple-color, 14, 165, 233), 0.08);
+    box-shadow: 0 8px 16px var(--box-shadow-color, rgba(0, 0, 0, 0.4));
+
+    &.ripple-0 {
+        animation: ripple 6s infinite 0s;
+    }
+
+    &.ripple-2 {
+        animation: ripple 6s infinite 2s;
+    }
+
+    &.ripple-4 {
+        animation: ripple 6s infinite 4s;
+    }
+}
+
+.pin-container:hover {
+    .gradient-line {
+        height: 12rem;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            animation: gradientFlow 2s ease-in-out forwards;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                transform: translateY(0%);
+            }
+            50% {
+                transform: translateY(-5%);
+            }
+            100% {
+                transform: translateY(-10%);
+            }
+        }
+    }
+}

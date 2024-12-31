@@ -1,0 +1,26 @@
+.custom-calendar {
+    position: relative;
+    width: 100%;
+
+    input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid var(--surface-border, #e2e8f0);
+        border-radius: 4px;
+        transition: border-color 0.2s;
+
+        &:focus {
+            outline: none;
+            border-color: var(--primary-color, #3b82f6);
+            box-shadow: 0 0 0 0.2rem var(--primary-focus-ring, rgba(59, 130, 246, 0.5));
+        }
+    }
+
+    .calendar-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,37 @@
+.panel {
+    background: var(--surface-card);
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+    &-header {
+        padding: 1rem;
+        background: var(--surface-ground);
+        border-bottom: 1px solid var(--surface-border);
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &.toggleable {
+            cursor: pointer;
+
+            &:hover {
+                background: var(--surface-ground);
+            }
+        }
+    }
+
+    &-content {
+        padding: 1rem;
+    }
+
+    &-toggle-icon {
+        font-size: 0.875rem;
+        transition: transform 0.2s;
+
+        &.expanded {
+            transform: rotate(180deg);
+        }
+    }
+}

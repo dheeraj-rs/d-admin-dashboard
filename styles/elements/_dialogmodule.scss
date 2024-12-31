@@ -1,0 +1,37 @@
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--surface-background, #fff);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px var(--surface-border, rgba(0, 0, 0, 0.2));
+    z-index: 1000;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--surface-background, rgba(0, 0, 0, 0.5));
+        z-index: 999;
+    }
+
+    &__header {
+        padding: 1rem;
+        border-bottom: 1px solid var(--surface-border, #e2e8f0);
+    }
+
+    &__content {
+        padding: 1rem;
+    }
+
+    &__footer {
+        padding: 1rem;
+        border-top: 1px solid var(--surface-border, #e2e8f0);
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+}

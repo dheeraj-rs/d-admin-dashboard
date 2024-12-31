@@ -1,0 +1,44 @@
+.panelmenu {
+    background: var(--surface-card);
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+
+    &__item {
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--surface-border);
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: var(--surface-hover);
+        }
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &__submenu-icon {
+        margin-left: auto;
+    }
+
+    &__content {
+        background: var(--surface-ground);
+        padding: 0.5rem 0;
+    }
+
+    &__item--level-1 {
+        padding-left: 1.5rem;
+    }
+
+    &__item--level-2 {
+        padding-left: 3rem;
+    }
+}

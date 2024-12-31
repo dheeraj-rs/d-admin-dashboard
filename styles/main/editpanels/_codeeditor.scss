@@ -1,0 +1,184 @@
+.mainContainer {
+    height: 100vh;
+    background: var(--surface-ground, #1e1e1e);
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.codeEditor {
+    width: 100%;
+    height: 100%;
+    background: var(--surface-ground, #1e1e1e);
+    color: var(--text-color, #d4d4d4);
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 1.5rem;
+    border: none;
+    resize: none;
+    outline: none;
+
+    &::placeholder {
+        color: var(--text-color-secondary, #666);
+    }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--surface-ground, #1e1e1e);
+        border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--surface-ground, #424242);
+        border-radius: 6px;
+        border: 3px solid var(--surface-ground, #1e1e1e);
+
+        &:hover {
+            background: var(--surface-ground, #525252);
+        }
+    }
+}
+
+.previewPanel {
+    position: absolute;
+    min-width: 200px;
+    min-height: 200px;
+    z-index: 10;
+    background: var(--surface-ground, #252525);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px var(--surface-shadow, rgba(0, 0, 0, 0.4));
+    border: 1px solid var(--surface-border, #333);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &__header {
+        padding: 8px 12px;
+        background: var(--surface-ground, #1a1a1a);
+        color: var(--text-color, #d4d4d4);
+        cursor: move;
+        user-select: none;
+        border-bottom: 1px solid var(--surface-border, #333);
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color, #4a9eff), var(--primary-color-dark, #9747ff));
+        }
+    }
+
+    &__content {
+        padding: 10px;
+        overflow: auto;
+        height: calc(100% - 30px);
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: monospace;
+        }
+    }
+
+    &__resizeHandle {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        cursor: se-resize;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 4px;
+            bottom: 4px;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid var(--text-color-secondary, #666);
+            border-bottom: 2px solid var(--text-color-secondary, #666);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 12px 40px var(--surface-shadow, rgba(0, 0, 0, 0.5));
+    }
+}
+
+.resizeHandle {
+    position: absolute;
+    background: transparent;
+
+    &.n {
+        top: -5px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        cursor: n-resize;
+    }
+
+    &.s {
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        cursor: s-resize;
+    }
+
+    &.e {
+        right: -5px;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        cursor: e-resize;
+    }
+
+    &.w {
+        left: -5px;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        cursor: w-resize;
+    }
+
+    &.ne {
+        right: -5px;
+        top: -5px;
+        width: 10px;
+        height: 10px;
+        cursor: ne-resize;
+    }
+
+    &.nw {
+        left: -5px;
+        top: -5px;
+        width: 10px;
+        height: 10px;
+        cursor: nw-resize;
+    }
+
+    &.se {
+        right: -5px;
+        bottom: -5px;
+        width: 10px;
+        height: 10px;
+        cursor: se-resize;
+    }
+
+    &.sw {
+        left: -5px;
+        bottom: -5px;
+        width: 10px;
+        height: 10px;
+        cursor: sw-resize;
+    }
+}

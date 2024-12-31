@@ -1,0 +1,47 @@
+.splitter {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+
+    &.horizontal {
+        flex-direction: row;
+
+        .splitter-gutter {
+            width: 4px;
+            cursor: col-resize;
+        }
+    }
+
+    &.vertical {
+        flex-direction: column;
+
+        .splitter-gutter {
+            height: 4px;
+            cursor: row-resize;
+        }
+    }
+
+    &-panel {
+        flex: 1;
+        min-width: 0;
+        min-height: 0;
+
+        &-content {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &-gutter {
+        background: var(--surface-border, #e2e8f0);
+        transition: background-color 0.2s;
+
+        &:hover {
+            background: var(--primary-color, #6366f1);
+        }
+
+        &:active {
+            background: var(--primary-color-dark, #4338ca);
+        }
+    }
+}

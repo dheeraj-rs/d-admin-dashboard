@@ -1,0 +1,169 @@
+{
+  "data": {
+    "overview": {
+      "websites": {
+        "title": "Live Websites",
+        "count": 369,
+        "new": 24,
+        "text": "since last visit"
+      },
+      "templates": {
+        "title": "Template Websites",
+        "amount": 2100,
+        "percentage": 52,
+        "text": "since last week"
+      },
+      "packages": {
+        "title": "Packages",
+        "count": 152,
+        "responded": 85,
+        "text": "responded"
+      },
+      "elements": {
+        "title": "UI Elements",
+        "count": 28441,
+        "new": 520,
+        "text": "newly registered"
+      }
+    },
+    "websiteOverview": {
+      "labels": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July"
+      ],
+      "datasets": [
+        {
+          "label": "websites visits",
+          "data": [
+            65,
+            59,
+            80,
+            81,
+            56,
+            55,
+            40
+          ],
+          "fill": false,
+          "backgroundColor": "#2f4860",
+          "borderColor": "#2f4860",
+          "tension": 0.4
+        },
+        {
+          "label": "elements visits",
+          "data": [
+            28,
+            48,
+            40,
+            19,
+            86,
+            27,
+            90
+          ],
+          "fill": false,
+          "backgroundColor": "#00bb7e",
+          "borderColor": "#00bb7e",
+          "tension": 0.4
+        }
+      ]
+    },
+    "downloads": [
+      {
+        "name": "website",
+        "category": "websites",
+        "percentage": 50,
+        "color": "orange"
+      },
+      {
+        "name": "template",
+        "category": "templates",
+        "percentage": 16,
+        "color": "cyan"
+      },
+      {
+        "name": "package",
+        "category": "packages",
+        "percentage": 67,
+        "color": "pink"
+      },
+      {
+        "name": "element",
+        "category": "elements",
+        "percentage": 35,
+        "color": "green"
+      }
+    ],
+    "notifications": {
+      "today": [
+        {
+          "icon": "pi-dollar",
+          "color": "blue",
+          "name": "live website user",
+          "status": "contacted",
+          "message": "contacted about your website"
+        },
+        {
+          "icon": "pi-download",
+          "color": "orange",
+          "name": "template user",
+          "status": "requested",
+          "message": "requested a template"
+        }
+      ],
+      "yesterday": [
+        {
+          "icon": "pi-dollar",
+          "color": "blue",
+          "name": "element user",
+          "status": "purchased",
+          "message": "element liked your element"
+        },
+        {
+          "icon": "pi-question",
+          "color": "pink",
+          "name": "template user",
+          "status": "posted",
+          "message": "liked your template"
+        }
+      ]
+    },
+    "recentActivity": [
+      {
+        "image": "assets/demo/images/website/website-1.png",
+        "name": "website name",
+        "status": "live",
+        "price": "free",
+        "message": "contacted about your website",
+        "viewUrl": "assets/demo/websitePageSample"
+      },
+      {
+        "image": "assets/demo/images/template/template-1.png",
+        "name": "template name",
+        "status": "viewed",
+        "price": "free",
+        "message": "liked your template",
+        "viewUrl": "assets/demo/templatePageSample"
+      },
+      {
+        "image": "assets/demo/images/package/package-1.png",
+        "name": "element name",
+        "status": "downloaded",
+        "price": "free",
+        "message": "liked your element",
+        "viewUrl": "assets/demo/elementPageSample"
+      },
+      {
+        "image": "assets/demo/images/website/website-2.png",
+        "name": "website name",
+        "status": "live",
+        "price": "free",
+        "message": "contacted about your website",
+        "viewUrl": "assets/demo/websitePageSample"
+      }
+    ]
+  }
+}

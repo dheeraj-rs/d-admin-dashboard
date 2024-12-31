@@ -1,0 +1,40 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__track {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &__item {
+        flex: 0 0 calc(100% / var(--items-visible, 3));
+        padding: 0 0.5rem;
+    }
+
+    &__nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--surface-border, #e2e8f0);
+        border: none;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        z-index: 1;
+
+        &--prev {
+            left: 1rem;
+        }
+
+        &--next {
+            right: 1rem;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.layout-options {
+    display: flex;
+    gap: 0.5rem;
+
+    .layout-button {
+        padding: 0.5rem;
+        border: 1px solid var(--surface-border, #e2e8f0);
+        background: var(--surface-background, #fff);
+        cursor: pointer;
+
+        &.active {
+            background: var(--primary-color, #3b82f6);
+            color: var(--primary-contrast, #fff);
+        }
+
+        &:hover {
+            background: var(--surface-border, #e2e8f0);
+        }
+
+        .grid-icon,
+        .list-icon {
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            background-size: contain;
+        }
+
+        // .grid-icon {
+        //     // background-image: url('/public/demo/images/product/path-to-your-grid-icon.svg');
+        // }
+
+        // .list-icon {
+        //     // background-image: url('/public/demo/images/product/path-to-your-list-icon.svg');
+        // }
+    }
+}

@@ -1,0 +1,98 @@
+@import 'variables';
+
+.templates-page {
+    border-radius: 12px;
+    background-color: #0a0a0a;
+    color: $color-text;
+    min-height: 100vh;
+    margin-bottom: $spacing-sm;
+
+    .templates {
+        padding: $spacing-xl;
+        &__title {
+            font-size: $font-size-h2;
+            margin-bottom: $spacing-xl;
+        }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: $spacing-lg;
+        }
+
+        &__card {
+            background: $color-card;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        &__card:hover {
+            transform: translateY(-4px);
+        }
+
+        &__card__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        &__card__content {
+            padding: $spacing-md;
+        }
+
+        &__card__content__title {
+            font-size: 1.25rem;
+            margin-bottom: $spacing-sm;
+        }
+
+        &__card__content__tech {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            margin-bottom: $spacing-md;
+        }
+
+        &__card__content__price {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: $spacing-md;
+        }
+
+        &__card__content__price_free {
+            color: $color-secondary;
+        }
+
+        &__card__content__actions {
+            display: flex;
+            gap: $spacing-sm;
+        }
+
+        &__card__content__actions__preview,
+        &__card__content__actions__action {
+            flex: 1;
+            padding: $spacing-sm;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        &__card__content__actions__preview {
+            background: $color-button;
+            color: $color-text;
+        }
+
+        &__card__content__actions__preview:hover {
+            background: lighten($color-button, 10%);
+        }
+
+        &__card__content__actions__action {
+            background: $color-primary;
+            color: $color-text;
+        }
+
+        &__card__content__actions__action:hover {
+            background: darken($color-primary, 10%);
+        }
+    }
+}

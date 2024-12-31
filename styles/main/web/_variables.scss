@@ -1,0 +1,69 @@
+// Colors
+$color-background: #0a0a0a;
+$color-text: #ffffff;
+$color-primary: #9333ea;
+$color-secondary: #3b82f6;
+$color-accent: #6366f1;
+$color-card: #111111;
+$color-button: #1f1f1f;
+
+// Typography
+$font-primary: 'Inter', sans-serif;
+$font-size-h1: 3.5rem;
+$font-size-h2: 2rem;
+$font-size-body: 1rem;
+
+// Spacing
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Colors
+$color-background: #0a0a0a;
+$color-text: #ffffff;
+$color-primary: #9333ea;
+$color-secondary: #3b82f6;
+$color-accent: #6366f1;
+$color-card: #111111;
+$color-button: #1f1f1f;
+
+// Typography
+$font-primary: 'Inter', sans-serif;
+$font-size-h1: 3rem;
+$font-size-h2: 2rem;
+$font-size-body: 1rem;
+
+// Spacing
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Mixins
+@mixin gradient-text($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+@mixin button-gradient($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+    &:hover {
+        opacity: 0.9;
+    }
+}

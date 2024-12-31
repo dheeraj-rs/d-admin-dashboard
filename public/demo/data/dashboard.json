@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "version": "1.2.0",
+    "lastUpdated": "2024-12-07T00:00:00Z",
+    "systemName": "Professional Website Management Dashboard",
+    "environment": "Production"
+  },
+  "websiteInventory": {
+    "liveWebsites": {
+      "total": 369,
+      "newSites": 24,
+      "activePercentage": 78.5,
+      "breakdown": {
+        "corporate": 45,
+        "ecommerce": 22,
+        "portfolio": 18,
+        "blog": 15
+      }
+    },
+    "templateLibrary": {
+      "total": 2100,
+      "available": {
+        "total": 1092,
+        "premium": 380,
+        "free": 712
+      },
+      "usageRate": 52,
+      "topCategories": [
+        "Business",
+        "Portfolio",
+        "E-commerce",
+        "Blog"
+      ]
+    }
+  },
+  "componentManagement": {
+    "uiElements": {
+      "total": 28441,
+      "newElements": 520,
+      "categories": [
+        "Buttons",
+        "Forms",
+        "Navigation",
+        "Cards",
+        "Modals"
+      ],
+      "mostUsedElements": [
+        "Primary Button",
+        "Input Field",
+        "Dropdown Menu"
+      ]
+    },
+    "packages": {
+      "total": 152,
+      "responded": 85,
+      "responseRate": 55.9,
+      "types": [
+        "Starter",
+        "Professional",
+        "Enterprise"
+      ]
+    }
+  },
+  "performanceAnalytics": {
+    "websiteTraffic": {
+      "timeSeriesData": {
+        "labels": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July"
+        ],
+        "datasets": [
+          {
+            "label": "Websites Visits",
+            "data": [
+              65,
+              59,
+              80,
+              81,
+              56,
+              55,
+              40
+            ],
+            "fill": false,
+            "backgroundColor": "#2f4860",
+            "borderColor": "#2f4860",
+            "tension": 0.4
+          },
+          {
+            "label": "Elements Visits",
+            "data": [
+              28,
+              48,
+              40,
+              19,
+              86,
+              27,
+              90
+            ],
+            "fill": false,
+            "backgroundColor": "#00bb7e",
+            "borderColor": "#00bb7e",
+            "tension": 0.4
+          }
+        ]
+      },
+      "overallMetrics": {
+        "totalVisits": 124500,
+        "uniqueVisitors": 78300,
+        "averageTimeOnSite": "3:45",
+        "bounceRate": 42.5,
+        "trafficSources": {
+          "organic": 45,
+          "direct": 30,
+          "referral": 15,
+          "social": 10
+        },
+        "deviceBreakdown": {
+          "desktop": 62,
+          "mobile": 35,
+          "tablet": 3
+        }
+      }
+    },
+    "issueTracking": {
+      "issueStatus": {
+        "total": 245,
+        "open": 67,
+        "resolved": 178,
+        "resolutionRate": 72.6
+      },
+      "severityBreakdown": {
+        "critical": 15,
+        "high": 32,
+        "medium": 48,
+        "low": 150
+      },
+      "topErrorTypes": [
+        "Performance",
+        "Security",
+        "Compatibility",
+        "Functionality"
+      ],
+      "resolutionTimeline": {
+        "average": "2.5 days",
+        "fastest": "4 hours",
+        "slowest": "7 days"
+      }
+    }
+  },
+  "userEngagement": {
+    "downloadActivity": [
+      {
+        "type": "Websites",
+        "percentage": 50,
+        "color": "orange"
+      },
+      {
+        "type": "Templates",
+        "percentage": 16,
+        "color": "cyan"
+      },
+      {
+        "type": "Packages",
+        "percentage": 67,
+        "color": "pink"
+      },
+      {
+        "type": "Elements",
+        "percentage": 35,
+        "color": "green"
+      }
+    ],
+    "interactionMetrics": {
+      "totalVisits": 15620,
+      "averageSessionDuration": "12 minutes",
+      "peakUsageTimes": [
+        "10:00 AM",
+        "2:00 PM",
+        "8:00 PM"
+      ]
+    }
+  },
+  "systemMonitoring": {
+    "notifications": {
+      "recent": [
+        {
+          "id": "NTF-001",
+          "type": "Website",
+          "icon": "pi-globe",
+          "message": "New website published",
+          "timestamp": "2024-12-06T15:30:00Z",
+          "priority": "medium"
+        },
+        {
+          "id": "NTF-002",
+          "type": "Template",
+          "icon": "pi-image",
+          "message": "Popular template updated",
+          "timestamp": "2024-12-06T14:45:00Z",
+          "priority": "low"
+        },
+        {
+          "id": "NTF-003",
+          "type": "Error",
+          "icon": "pi-exclamation-triangle",
+          "message": "Critical issue resolved",
+          "timestamp": "2024-12-06T13:20:00Z",
+          "priority": "high"
+        }
+      ]
+    },
+    "healthMetrics": {
+      "uptime": "99.95%",
+      "responseTime": "120ms",
+      "serverLoad": "42%",
+      "criticalAlerts": 3
+    },
+    "userSatisfaction": {
+      "overallRating": 4.7,
+      "totalReviews": 1245,
+      "recommendationRate": 92.5
+    }
+  },
+  "recentActivity": [
+    {
+      "id": 1,
+      "type": "website",
+      "name": "Corporate Portal",
+      "status": "live",
+      "timestamp": "2024-12-06T16:45:00Z",
+      "details": {
+        "category": "Corporate",
+        "technologies": [
+          "React",
+          "Node.js"
+        ],
+        "performanceScore": 87
+      }
+    },
+    {
+      "id": 2,
+      "type": "template",
+      "name": "Modern Business Template",
+      "status": "updated",
+      "timestamp": "2024-12-06T15:20:00Z",
+      "details": {
+        "version": "2.1.0",
+        "downloads": 1245,
+        "rating": 4.6
+      }
+    }
+  ]
+}

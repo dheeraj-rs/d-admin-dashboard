@@ -1,0 +1,44 @@
+.sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.sidebar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--surface-overlay, rgba(0, 0, 0, 0.4));
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background: var(--surface-card, #fff);
+    width: 320px;
+    max-width: 90vw;
+    box-shadow: 0 0 10px var(--surface-border, #e2e8f0);
+    transition: transform 0.3s ease-in-out;
+    padding: 1.5rem;
+    z-index: 1;
+
+    &--right {
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    &--left {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    &--visible {
+        transform: translateX(0);
+    }
+}

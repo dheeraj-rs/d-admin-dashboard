@@ -1,0 +1,72 @@
+.panels-container {
+    padding: 10px;
+    background: var(--background-color);
+    min-height: 100vh;
+}
+
+.panel-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    .panel {
+        background: var(--background-color);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px var(--surface-shadow, rgba(0, 0, 0, 0.1));
+        transition: all 0.3s ease;
+        overflow: hidden;
+        cursor: pointer;
+        min-height: 200px;
+        width: 100%;
+
+        .panel-header {
+            .panel-controls {
+                display: flex;
+                gap: 8px;
+
+                .control-btn {
+                    padding: 6px 12px;
+                    border: none;
+                    border-radius: 4px;
+                    background: transparent;
+                    color: var(--text-color-secondary, #666);
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        background: var(--background-color);
+                        color: var(--text-color-secondary, #333);
+                    }
+
+                    &.active {
+                        background: var(--background-color);
+                        color: var(--primary-color, #007bff);
+                    }
+
+                    i {
+                        font-size: 14px;
+                    }
+                }
+
+                .copy-btn {
+                    color: var(--text-color-secondary, #666);
+
+                    &:hover {
+                        background: var(--surface-ground, rgba(0, 0, 0, 0.05));
+                    }
+                }
+            }
+        }
+        .panel-content {
+            height: 100%;
+            min-height: 150px;
+            background: var(--background-color);
+            position: relative;
+        }
+    }
+}

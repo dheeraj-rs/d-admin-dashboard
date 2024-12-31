@@ -1,0 +1,24 @@
+.selectButton {
+    display: flex;
+    gap: 0.5rem;
+
+    .option {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--border-color, var(--surface-border));
+        background: var(--bg-color, var(--surface-card));
+        color: var(--text-color, var(--text-color-secondary));
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: var(--hover-bg, var(--surface-ground));
+        }
+
+        &.selected {
+            background: var(--selected-bg, var(--primary-500));
+            color: var(--selected-text, var(--primary-contrast));
+            border-color: var(--selected-border, var(--primary-500));
+        }
+    }
+}

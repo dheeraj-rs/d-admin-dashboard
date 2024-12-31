@@ -1,0 +1,36 @@
+.toggleButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--surface-border, #ced4da);
+    border-radius: 4px;
+    background: var(--surface-card, #fff);
+    color: var(--text-color, #495057);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover:not(:disabled) {
+        background: var(--surface-ground, #e9ecef);
+    }
+
+    &.checked {
+        background: #3b82f6;
+        color: var(--primary-color-text, #fff);
+        border-color: var(--primary-color, #3b82f6);
+
+        &:hover:not(:disabled) {
+            background: var(--primary-color-dark, #2563eb);
+        }
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .label {
+        font-size: 0.875rem;
+    }
+}

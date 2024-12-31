@@ -1,0 +1,41 @@
+.radio-button {
+    position: relative;
+    display: inline-block;
+
+    input[type='radio'] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked + .radio-button__custom {
+            border-color: var(--primary-color);
+
+            &:after {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__custom {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--surface-border, #e2e8f0);
+        border-radius: 50%;
+        transition: all 0.2s ease;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            transition: transform 0.2s ease;
+        }
+    }
+}
