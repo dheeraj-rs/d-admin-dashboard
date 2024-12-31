@@ -1,0 +1,47 @@
+.custom-messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    .message-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        animation: slideIn 0.3s ease-out;
+
+        &.success {
+            background-color: var(--success-color-light, #dff2bf);
+            color: var(--success-color-primary, #4f8a10);
+        }
+
+        &.info {
+            background-color: var(--info-color-light, #bde5f8);
+            color: var(--info-color-primary, #00529b);
+        }
+
+        &.warn {
+            background-color: var(--warn-color-light, #feefb3);
+            color: var(--warn-color-primary, #9f6000);
+        }
+
+        &.error {
+            background-color: var(--error-color-light, #ffd2d2);
+            color: var(--error-color-primary, #d8000c);
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

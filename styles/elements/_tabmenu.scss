@@ -1,0 +1,33 @@
+.tabmenu {
+    display: flex;
+    background: var(--surface-card);
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    padding: 0.5rem;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: var(--surface-hover);
+        }
+
+        &--active {
+            background-color: var(--primary-color);
+            color: var(--primary-color-text);
+        }
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &__label {
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,16 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--surface-ground);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+
+    &__left,
+    &__right {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}

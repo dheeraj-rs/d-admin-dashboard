@@ -1,0 +1,63 @@
+.custom-multiselect {
+    position: relative;
+    width: 100%;
+
+    .multiselect-header {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid var(--surface-border);
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .selected-options {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .arrow {
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .multiselect-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface-card);
+        border: 1px solid var(--surface-border);
+        border-radius: 4px;
+        margin-top: 4px;
+        padding: 0;
+        list-style: none;
+        z-index: 1000;
+        max-height: 200px;
+        overflow-y: auto;
+
+        li {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            &:hover {
+                background-color: var(--surface-ground);
+            }
+
+            &.selected {
+                background-color: var(--surface-ground);
+            }
+
+            input[type='checkbox'] {
+                margin: 0;
+            }
+        }
+    }
+}

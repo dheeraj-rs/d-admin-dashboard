@@ -1,0 +1,11 @@
+.custom-column {
+    padding: 1rem;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 0; // Prevents flex items from overflowing
+
+    // Add some basic responsive behavior
+    @media (max-width: 768px) {
+        width: 100% !important; // Override inline width on mobile
+    }
+}

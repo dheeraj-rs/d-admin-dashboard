@@ -1,0 +1,38 @@
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    background-color: var(--surface-ground, #e0e0e0);
+    color: #212121;
+
+    &--rounded {
+        border-radius: 20px;
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    &--success {
+        background-color: var(--success-color-light, #e8f5e9);
+        color: var(--success-color, #2e7d32);
+    }
+
+    &--info {
+        background-color: var(--info-color-light, #e3f2fd);
+        color: var(--info-color, #1976d2);
+    }
+
+    &--warning {
+        background-color: var(--warning-color-light, #fff3e0);
+        color: var(--warning-color, #f57c00);
+    }
+
+    &--danger {
+        background-color: var(--danger-color-light, #ffebee);
+        color: var(--danger-color, #d32f2f);
+    }
+}

@@ -1,0 +1,42 @@
+.breadcrumb-container {
+    padding: 0.5rem;
+    background: var(--surface-card);
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: var(--surface-hover);
+        }
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &__separator {
+        margin: 0 0.5rem;
+        color: var(--text-color-secondary);
+    }
+}

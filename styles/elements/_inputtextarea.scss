@@ -1,0 +1,20 @@
+.textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--surface-border, #e2e8f0);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+
+    &:focus {
+        outline: none;
+        border-color: var(--primary-color, #3b82f6);
+    }
+
+    &:disabled {
+        background-color: var(--surface-border, #e2e8f0);
+        cursor: not-allowed;
+    }
+}

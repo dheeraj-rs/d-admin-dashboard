@@ -1,0 +1,169 @@
+.splitButton {
+    display: inline-flex;
+    position: relative;
+
+    :global(.custom-button) {
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &:focus-visible {
+                z-index: 1;
+            }
+        }
+    }
+
+    .menuButton {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 1px solid var(--split-button-separator, rgba(255, 255, 255, 0.2));
+        padding: 0.75rem;
+        min-width: 3rem;
+        justify-content: center;
+
+        &:focus-visible {
+            outline: 0 none;
+            outline-offset: 0;
+            z-index: 1;
+            box-shadow: 0 0 0 0.2rem var(--focus-ring-color, rgba(38, 143, 255, 0.5));
+        }
+
+        // Severity-specific focus styles
+        :global(.custom-button--secondary) &:focus-visible {
+            box-shadow: 0 0 0 0.2rem var(--secondary-focus-ring, rgba(100, 116, 139, 0.5));
+        }
+
+        :global(.custom-button--success) &:focus-visible {
+            box-shadow: 0 0 0 0.2rem var(--success-focus-ring, rgba(34, 197, 94, 0.5));
+        }
+
+        :global(.custom-button--warning) &:focus-visible {
+            box-shadow: 0 0 0 0.2rem var(--warning-focus-ring, rgba(245, 158, 11, 0.5));
+        }
+
+        :global(.custom-button--help) &:focus-visible {
+            box-shadow: 0 0 0 0.2rem var(--help-focus-ring, rgba(168, 85, 247, 0.5));
+        }
+
+        :global(.custom-button--danger) &:focus-visible {
+            box-shadow: 0 0 0 0.2rem var(--danger-focus-ring, rgba(239, 68, 68, 0.5));
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: calc(100% + 0.25rem);
+        left: 0;
+        min-width: 100%;
+        padding: 0.5rem 0;
+        margin: 0;
+        background: var(--surface-overlay, var(--surface-card));
+        border: 1px solid var(--surface-border, var(--surface-border));
+        border-radius: var(--border-radius, 6px);
+        box-shadow: var(--overlay-shadow, 0 2px 4px rgba(0, 0, 0, 0.1));
+        z-index: var(--overlay-z-index, 1000);
+        list-style: none;
+        animation: menuFadeIn 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+        li {
+            padding: 0.75rem 1rem;
+            margin: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            color: var(--text-color, var(--text-color-secondary));
+            user-select: none;
+
+            &:hover,
+            &:active,
+            &:focus-visible {
+                @at-root {
+                    .dark-theme & {
+                        background: var(--surface-hover-dark, var(--surface-card));
+                    }
+                }
+            }
+
+            i {
+                font-size: 1rem;
+                color: var(--text-secondary-color, var(--text-color-secondary));
+                margin-right: 0.5rem;
+            }
+
+            span {
+                color: inherit;
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+
+            &:focus-visible {
+                outline: 0 none;
+                outline-offset: 0;
+                box-shadow: 0 0 0 0.2rem var(--focus-ring-color, rgba(38, 143, 255, 0.5));
+            }
+        }
+    }
+
+    // Rounded variant support
+    &:global(.rounded) {
+        :global(.custom-button) {
+            &:first-child {
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+            }
+        }
+
+        .menuButton {
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+    }
+
+    // Dark theme support
+    :global(.dark-theme) & {
+        .menu {
+            background: var(--surface-overlay-dark, #1f2937);
+            border-color: var(--surface-border-dark, #374151);
+
+            li {
+                color: var(--text-color-dark, var(--text-color-secondary));
+
+                &:hover {
+                    background: var(--surface-hover-dark, #374151);
+                }
+
+                &:active {
+                    background: var(--surface-active-dark, #4b5563);
+                }
+
+                i {
+                    color: var(--text-secondary-color-dark, #9ca3af);
+                }
+            }
+        }
+    }
+}
+
+@keyframes menuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-0.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Media query for touch devices
+@media (hover: none) {
+    .splitButton {
+        .menu {
+            li {
+                padding: 1rem 1.25rem;
+            }
+        }
+    }
+}

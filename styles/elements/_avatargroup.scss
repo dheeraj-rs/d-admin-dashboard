@@ -1,0 +1,33 @@
+.avatar-group {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+        margin-left: -0.5rem;
+        border: 2px solid var(--surface-ground);
+        transition: transform 0.2s;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            z-index: 1;
+        }
+    }
+
+    &__counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--surface-ground);
+        color: var(--text-color-secondary);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        margin-left: -0.5rem;
+        border: 2px solid var(--surface-ground);
+        font-size: 0.875rem;
+    }
+}

@@ -1,0 +1,81 @@
+.customer-badge,
+.product-badge,
+.order-badge {
+    border-radius: var(--border-radius);
+    padding: 0.25em 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+.product-badge {
+    &.status-instock {
+        background: var(--surface-ground, #c8e6c9);
+        color: var(--text-color, #256029);
+    }
+
+    &.status-outofstock {
+        background: var(--surface-ground, #ffcdd2);
+        color: var(--text-color, #c63737);
+    }
+
+    &.status-lowstock {
+        background: var(--surface-ground, #feedaf);
+        color: var(--text-color, #8a5340);
+    }
+}
+
+.customer-badge {
+    &.status-qualified {
+        background: var(--surface-ground, #c8e6c9);
+        color: var(--text-color, #256029);
+    }
+
+    &.status-unqualified {
+        background: var(--surface-ground, #ffcdd2);
+        color: var(--text-color, #c63737);
+    }
+
+    &.status-negotiation {
+        background: var(--surface-ground, #feedaf);
+        color: var(--text-color, #8a5340);
+    }
+
+    &.status-new {
+        background: var(--surface-ground, #b3e5fc);
+        color: var(--text-color, #23547b);
+    }
+
+    &.status-renewal {
+        background: var(--surface-ground, #eccfff);
+        color: var(--text-color, #694382);
+    }
+
+    &.status-proposal {
+        background: var(--surface-ground, #ffd8b2);
+        color: var(--text-color, #805b36);
+    }
+}
+
+.order-badge {
+    &.order-delivered {
+        background: var(--surface-ground, #c8e6c9);
+        color: var(--text-color, #256029);
+    }
+
+    &.order-cancelled {
+        background: var(--surface-ground, #ffcdd2);
+        color: var(--text-color, #c63737);
+    }
+
+    &.order-pending {
+        background: var(--surface-ground, #feedaf);
+        color: var(--text-color, #8a5340);
+    }
+
+    &.order-returned {
+        background: var(--surface-ground, #eccfff);
+        color: var(--text-color, #694382);
+    }
+}

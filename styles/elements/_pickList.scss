@@ -1,0 +1,38 @@
+.picklist {
+    display: flex;
+    gap: 1rem;
+
+    &-list-wrapper {
+        flex: 1;
+        border: 1px solid var(--surface-border, #e2e8f0);
+        border-radius: 6px;
+    }
+
+    &-header {
+        padding: 1rem;
+        background: var(--surface-hover, #f8f9fa);
+        border-bottom: 1px solid var(--surface-border, #e2e8f0);
+        font-weight: 600;
+    }
+
+    &-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    &-item {
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        border-bottom: 1px solid var(--surface-border, #e2e8f0);
+
+        &:hover {
+            background: var(--surface-hover, #f8f9fa);
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

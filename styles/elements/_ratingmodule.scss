@@ -1,0 +1,19 @@
+.rating {
+    display: inline-flex;
+    gap: 0.25rem;
+
+    &__star {
+        font-size: 1.5rem;
+        color: var(--surface-border, #e2e8f0);
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &--filled {
+            color: var(--filled-color, #ffd700);
+        }
+
+        &:hover {
+            color: var(--filled-color, #ffd700);
+        }
+    }
+}

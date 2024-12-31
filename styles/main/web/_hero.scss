@@ -1,0 +1,62 @@
+@import 'variables';
+
+.hero {
+    text-align: center;
+    padding: $spacing-xl 0;
+
+    &__title {
+        font-size: $font-size-h1;
+        font-weight: 700;
+        margin-bottom: $spacing-md;
+    }
+
+    &__title__portfolio {
+        color: $color-primary;
+    }
+
+    &__title__website {
+        color: $color-secondary;
+    }
+
+    &__subtitle {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: $font-size-body;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__filter {
+        display: flex;
+        justify-content: center;
+        gap: $spacing-md;
+        margin: $spacing-xl 0;
+        padding: $spacing-md;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 999px;
+        max-width: fit-content;
+        margin-inline: auto;
+    }
+
+    &__filter__button {
+        padding: $spacing-sm $spacing-lg;
+        border-radius: 999px;
+        border: none;
+        background: transparent;
+        color: $color-text;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__filter__button_active {
+        background: $color-accent;
+    }
+
+    &__filter__button:hover:not(&__filter__button_active) {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    &__filter__button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba($color-accent, 0.5);
+    }
+}

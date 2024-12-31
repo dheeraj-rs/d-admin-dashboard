@@ -1,0 +1,54 @@
+.steps {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+
+    &__item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 1rem;
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--surface-border);
+            transform: translateY(-50%);
+        }
+
+        &--active {
+            .steps__number {
+                background: var(--primary-color);
+                color: var(--primary-color-text);
+            }
+        }
+    }
+
+    &__number {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: var(--surface-card);
+        border: 2px solid var(--surface-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
+        z-index: 1;
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &__label {
+        font-weight: 500;
+    }
+}
